@@ -8,6 +8,7 @@ public class Main {
         Circle circle = new Circle();
         Circle circle2 = new Circle();
 
+
         //circle2.paint();
 
         circle.coordsA = new Coords(5,2);
@@ -17,10 +18,13 @@ public class Main {
         circle2.coordsB = new Coords(10,1);
 
 
+        circle2.setColor("grey");
+        circle.setColor("grey");
+
+//        System.out.println(circle2.getColor());
+
         //   Triangle
         Triangle triangle = new Triangle();
-
-        triangle.paint();
 
         triangle.coordsA = new Coords(5,2);
         triangle.coordsB = new Coords(10,1);
@@ -34,7 +38,7 @@ public class Main {
         rectangle.coordsB = new Coords(2,0);
         rectangle.coordsC = new Coords(2,4);
 
-        rectangle.color = "red";
+        rectangle.setColor("red");
 
         //array
 
@@ -45,12 +49,12 @@ public class Main {
         myArray[3] = rectangle;
         for (int i = 0; i < 4; i++) {
 
-            System.out.println(myArray[i].toString() + " my calculated area is " + myArray[i].calculateArea() + " my calculated perimeter is " + myArray[i].calculatePerimeter() + " my color is "+ myArray[i].color + myArray[i].hashCode());
+            System.out.println(myArray[i].toString() + " my calculated area is " + myArray[i].calculateArea() + " my calculated perimeter is " + myArray[i].calculatePerimeter() + " my color is "+ myArray[i].getColor() + myArray[i].hashCode());
 
             }
 
 
-        if (triangle.equals(circle)) {
+        if (circle2.equals(circle)) {
 
             System.out.println("equal objects");
         } else {

@@ -16,17 +16,9 @@ public class Triangle extends Shape {
         return "I am Triangle";
     }
 
-    public boolean equals(Object obj ) {
-        if (!super.equals(obj)) {
-            return false;
-        }
+    public int hashCode() {
 
-        Triangle c = (Triangle) obj;
-        if (this.calculateArea() == c.calculateArea() && this.color == c.color) {
-            System.out.println("having same area and same color");
-            return true;
-        } else
-        return false ;
+        return 123;
     }
 
 

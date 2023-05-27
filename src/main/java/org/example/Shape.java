@@ -1,26 +1,34 @@
 package org.example;
-public class Shape {
+abstract class  Shape {
 
     public Shape() {
     }
 
+    public abstract double calculateArea ();
+
     double sArea;
 
-    public String color = "blue";
+    private String color;
 
-    public double calculateArea() {
-        return 0;
+
+    public String getColor(){
+        return color;
     }
 
-    ;
+    public void setColor(String color){
+        this.color = color;
+    }
+
+
+
+//    public double calculateArea() {
+//        return 0;
+//    }
+
+
 
     public double calculatePerimeter() {
         return 0;
-    }
-
-    public String paint() {
-        color = "green";
-        return color;
     }
 
     public double sqr(double a) {
@@ -43,7 +51,16 @@ public class Shape {
         if (this.getClass() != obj.getClass()) {
             return false;
         }
-            return true;
-        }
+//            return true;
+//        }
 
+        Shape c = (Shape) obj;
+        if (this.calculateArea() == c.calculateArea() && this.getColor() == c.getColor()) {
+            System.out.println("having same area");
+            return true;
+        } else
+            return false;
     }
+
+
+}

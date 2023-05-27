@@ -22,17 +22,4 @@ public class Rectangle extends Shape {
         return 321;
     }
 
-    public boolean equals(Object obj ) {
-        if (!super.equals(obj)) {
-            return false;
-        }
-
-        Rectangle c = (Rectangle) obj;
-        if (this.calculateArea() == c.calculateArea() && this.color == c.color) {
-            System.out.println("having same area");
-            return true;
-        } else
-        return false;
-    }
-
 }

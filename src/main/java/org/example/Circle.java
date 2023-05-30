@@ -5,6 +5,13 @@ public class Circle extends Shape {
     Coords coordsA;
     Coords coordsB;
 
+    public Circle () {
+
+        color = Color.BLUE;
+
+    }
+
+
     public double calculateArea() {
 
         return Math.PI * (sqr(twoPointsDisatce(coordsA, coordsB)));
@@ -25,5 +32,6 @@ public class Circle extends Shape {
 
         return 111;
     }
+
 }
 

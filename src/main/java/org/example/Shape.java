@@ -8,23 +8,7 @@ abstract class  Shape {
 
     double sArea;
 
-    private String color;
-
-
-    public String getColor(){
-        return color;
-    }
-
-    public void setColor(String color){
-        this.color = color;
-    }
-
-
-
-//    public double calculateArea() {
-//        return 0;
-//    }
-
+    public Color color;
 
 
     public double calculatePerimeter() {
@@ -35,7 +19,7 @@ abstract class  Shape {
         return a * a;
     }
 
-    ;
+
 
     public double twoPointsDisatce(Coords coords1, Coords coords2) {
 
@@ -51,16 +35,14 @@ abstract class  Shape {
         if (this.getClass() != obj.getClass()) {
             return false;
         }
-//            return true;
-//        }
+
 
         Shape c = (Shape) obj;
-        if (this.calculateArea() == c.calculateArea() && this.getColor() == c.getColor()) {
+        if (this.calculateArea() == c.calculateArea() && this.color == c.color) {
             System.out.println("having same area");
             return true;
         } else
             return false;
     }
-
 
 }
